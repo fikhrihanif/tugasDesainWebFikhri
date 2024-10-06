@@ -1,17 +1,6 @@
 const CACHE_NAME = 'site-cache-v1';
 const urlsToCache = [
-    '/tugasDesainWebFikhri/index.html',
     '/tugasDesainWebFikhri/about.html',
-    '/tugasDesainWebFikhri/app.js',
-    '/tugasDesainWebFikhri/confirmation.html',
-    '/tugasDesainWebFikhri/contact.html',
-    '/tugasDesainWebFikhri/foto.jpg',
-    '/tugasDesainWebFikhri/image.jpg',
-    '/tugasDesainWebFikhri/Logo128.png',
-    '/tugasDesainWebFikhri/Logo144.png',
-    '/tugasDesainWebFikhri/Logo192.png',
-    '/tugasDesainWebFikhri/Logo512.png',
-    '/tugasDesainWebFikhri/manifest.json',
     '/tugasDesainWebFikhri/style.css',
     '/tugasDesainWebFikhri/offline.html'
 ];
