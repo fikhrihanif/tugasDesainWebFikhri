@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <base href="/tugasDesainWebFikhri/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ini Website Saya Pak</title>
+    <link rel="stylesheet" type="text/css" href="/tugasDesainWebFikhri/style.css">
+    <link rel="manifest" href="/tugasDesainWebFikhri/manifest.json">
+</head>
+<body>
+    <div class="container">
+        <div class="menu">
+            <a href="/tugasDesainWebFikhri/index.html">Home</a>
+            <a href="/tugasDesainWebFikhri/about.html">About</a>
+            <a href="/tugasDesainWebFikhri/contact.html">Contact</a>
+        </div>
+
+        <h1>Selamat Datang di Website Saya Pakk</h1>
+        <p>Ini halaman utama website saya pak.</p>
+        <p>Menu menu diatas bisa di klik untuk mengunjungi halaman lainnya pak.</p>
+        <p>Ini adalah halaman utama website saya yang kini sudah menjadi Progressive Web App (PWA).</p>
+        <p>PWA memberikan pengalaman pengguna yang lebih baik dengan kemampuan untuk diinstal di perangkat Anda, bekerja secara offline, dan melakukan pembaruan otomatis.</p>
+        <img src="/tugasDesainWebFikhri/image.jpg" alt="Gambar Website Saya" class="logo">
+
+        <button id="installButton" style="display: none;">Instal Disini</button>
+    </div>
+
+    <script src="/tugasDesainWebFikhri/app.js"></script>
+
+
+    <script>
+		// Pendaftaran Service Worker
+		if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/tugasDesainWebFikhri/service-worker.js')
+            .then(registration => {
+                console.log('Service Worker terdaftar dengan sukses:', registration);
+            })
+            .catch(error => {
+                console.error('Gagal mendaftarkan Service Worker:', error);
+            });
+    });
+}
+
+	</script>
+</body>
+</html>

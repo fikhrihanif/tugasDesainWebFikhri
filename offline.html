@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html> 
+<head>
+    <base href="/tugasDesainWebFikhri/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offline</title>
+    <link rel="stylesheet" type="text/css" href="/tugasDesainWebFikhri/style.css">
+    <link rel="manifest" href="/tugasDesainWebFikhri/manifest.json">
+</head>
+<body>
+    <div class="container">
+        <h1>Anda Sedang Offline</h1>
+        <p>Anda tidak terhubung ke internet.</p>
+        <a href="/tugasDesainWebFikhri/about.html" class="buttonoffline">Kembali ke About Us</a> 
+    </div>
+</body>
+<script>
+    // Pendaftaran Service Worker
+    if ('serviceWorker' in navigator) {
+window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/tugasDesainWebFikhri/service-worker.js')
+        .then(registration => {
+            console.log('Service Worker terdaftar dengan sukses:', registration);
+        })
+        .catch(error => {
+            console.error('Gagal mendaftarkan Service Worker:', error);
+        });
+});
+}
+
+</script>
+</html>

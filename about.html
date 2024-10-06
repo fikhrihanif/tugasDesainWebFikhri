@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<base href="/tugasDesainWebFikhri/">
+	<title>About Us</title>
+	<link rel="stylesheet" type="text/css" href="/tugasDesainWebFikhri/style.css">
+	<link rel="manifest" href="/tugasDesainWebFikhri/manifest.json">
+
+</head>
+<body>
+	<div class="container">
+		<div class="menu">
+			<a href="/tugasDesainWebFikhri/index.html">Home</a>
+			<a href="/tugasDesainWebFikhri/about.html">About</a>
+			<a href="/tugasDesainWebFikhri/contact.html">Contact</a>
+		</div>
+		
+		<h1>About Us</h1>
+		<p>Ini adalah halaman tentang saya pak.</p>
+		<p>Perkenalkan pak</p>
+		<p>Nama saya Fikhri Hanif</p>
+		<p>Dari prodi Informatika Universitas Andalas</p>
+		<p>Berasal dari Bukittinggi</p>
+		<p>Website ini adalah contoh Progressive Web App (PWA) yang memberikan pengalaman pengguna yang lebih baik.</p>
+        <p>Kami bertujuan untuk menyediakan informasi yang berguna dengan aksesibilitas yang tinggi, termasuk kemampuan untuk diakses secara offline dan diinstal di perangkat Anda.</p>
+
+		<img src="/tugasDesainWebFikhri/foto.jpg" alt="Foto Saya Pak" class="Foto">
+	</div>
+       
+	<script>
+		// Pendaftaran Service Worker
+		if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/tugasDesainWebFikhri/service-worker.js')
+            .then(registration => {
+                console.log('Service Worker terdaftar dengan sukses:', registration);
+            })
+            .catch(error => {
+                console.error('Gagal mendaftarkan Service Worker:', error);
+            });
+    });
+}
+
+	</script>
+</body>
+</html>

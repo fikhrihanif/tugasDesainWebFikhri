@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<base href="/tugasDesainWebFikhri/">
+	<title>Contact Us</title>
+	<link rel="stylesheet" type="text/css" href="/tugasDesainWebFikhri/style.css">
+	<link rel="manifest" href="/tugasDesainWebFikhri/manifest.json">
+</head>
+<body>
+	<div class="container">
+		<div class="menu">
+			<a href="/tugasDesainWebFikhri/index.html">Home</a>
+			<a href="/tugasDesainWebFikhri/about.html">About</a>
+			<a href="/tugasDesainWebFikhri/contact.html">Contact</a>
+		</div>
+		
+		<h1>Contact Us</h1>
+		<p>Ini adalah halaman kontak saya pak</p>
+		<p>Dibawah ini tertera email dan telepon saya pak</p>
+		<p>Email: fikhrihanif8@gmail.com</p>
+		<p>Telefon: 082247006098</p>
+
+		<!-- Add the form input here -->
+		<form action="/tugasDesainWebFikhri/confirmation.html" method="post">
+			<label for="name">Nama:</label>
+			<input type="text" id="name" name="name"><br><br>
+
+			<label for="email">Email:</label>
+			<input type="email" id="email" name="email"><br><br>
+
+			<label for="category">Kategori:</label>
+			<select id="category" name="category">
+				<option value="pertanyaan">Pertanyaan</option>
+				<option value="saran">Saran</option>
+				<option value="masalah">Masalah</option>
+			</select><br><br>
+
+			<label for="message">Pesan:</label>
+			<textarea id="message" name="message"></textarea><br><br>
+
+			<label for="response">Apakah Anda ingin menerima balasan?</label>
+			<input type="radio" id="yes" name="response" value="yes">
+			<label for="yes">Ya</label>
+			<input type="radio" id="no" name="response" value="no">
+			<label for="no">Tidak</label><br><br>
+
+			<input type="submit" value="Kirim Pesan">
+		</form>
+	</div>
+	<script>
+		// Pendaftaran Service Worker
+		if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/tugasDesainWebFikhri/service-worker.js')
+            .then(registration => {
+                console.log('Service Worker terdaftar dengan sukses:', registration);
+            })
+            .catch(error => {
+                console.error('Gagal mendaftarkan Service Worker:', error);
+            });
+    });
+}
+
+	</script>
+</body>
+</html>
